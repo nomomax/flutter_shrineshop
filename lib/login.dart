@@ -64,19 +64,23 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             ButtonBar(
-              // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
                 FlatButton(
                   child: Text('CANCEL'),
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))
+                  ),
                   onPressed: () {
                     _usernameController.clear();
                     _passwordController.clear();
                   },
                 ),
-                // TODO: Add a beveled rectangular border to NEXT (103)
                 RaisedButton(
-                  elevation: 8.0,
                   child: Text('NEXT'),
+                  elevation: 8.0,
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))
+                  ),
                   onPressed: () {
                     Navigator.pop(context);
                   },
